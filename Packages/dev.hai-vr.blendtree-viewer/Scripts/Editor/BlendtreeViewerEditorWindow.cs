@@ -12,10 +12,9 @@ namespace Hai.BlendtreeViewer.Scripts.Editor
         private const string AnimatorBlendTreeLabel = "Animator BlendTree";
         private const string SelectLabel = "Select";
         private const string TypeAndChildCountLabel = "{0} (×{1})";
-        private const string SharedParameterLabel = "Shared Parameter";
 
         public bool syncWithAnimator = true;
-        public bool readOnly = true;
+        // public bool readOnly = true;
         public BlendTree blendTree;
         
         private Vector2 _scrollPos;
@@ -52,10 +51,6 @@ namespace Hai.BlendtreeViewer.Scripts.Editor
             {
                 if (isSharedDbt)
                 {
-                    // EditorGUILayout.BeginHorizontal();
-                    // Indent(indent);
-                    // EditorGUILayout.TextField(new GUIContent(SharedParameterLabel), childMotions[0].directBlendParameter);
-                    // EditorGUILayout.EndHorizontal();
                     EditorGUI.BeginDisabledGroup(true);
                     EditorGUILayout.LabelField("×", GUILayout.Width(10));
                     EditorGUILayout.TextField(childMotions[0].directBlendParameter, EditorStyles.boldLabel);
@@ -189,7 +184,7 @@ namespace Hai.BlendtreeViewer.Scripts.Editor
             
             EditorGUILayout.BeginHorizontal();
             EditorGUILayout.PropertyField(serializedObject.FindProperty(nameof(syncWithAnimator)));
-            EditorGUILayout.PropertyField(serializedObject.FindProperty(nameof(readOnly)));
+            // EditorGUILayout.PropertyField(serializedObject.FindProperty(nameof(readOnly)));
             EditorGUILayout.EndHorizontal();
             serializedObject.ApplyModifiedProperties();
         }
