@@ -1,9 +1,9 @@
 {
   "name": "dev.hai-vr.blendtree-viewer",
-  "displayName": "BlendTree Viewer https://blendtree-viewer.docs.hai-vr.dev",
-  "version": "1.0.3",
+  "displayName": "BlendTree Viewer",
+  "version": "1.0.4",
   "unity": "2019.4",
-  "description": "View large BlendTrees.",
+  "description": "View large blend trees in a compact view https://docs.hai-vr.dev/docs/products/blendtree-viewer",
   "vrchatVersion" : "2022.1.1",
   "author" : {
     "name" : "Haï~"
