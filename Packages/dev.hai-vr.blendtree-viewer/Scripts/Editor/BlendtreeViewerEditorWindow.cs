@@ -128,13 +128,14 @@ namespace Hai.BlendtreeViewer.Scripts.Editor
                 Indent(indent);
                 EditorGUILayout.TextField(binding.propertyName);
                 EditorGUILayout.LabelField("=", GUILayout.Width(20));
-                if (curve.keys.Length == 1 || curve.keys.Length == 2 && curve.keys[0].value == curve.keys[1].value)
+                var keys = curve.keys;
+                if (keys.Length == 1 || keys.Length == 2 && keys[0].value == keys[1].value)
                 {
-                    EditorGUILayout.TextField($"{curve.keys[0].value}", EditorStyles.label);
+                    EditorGUILayout.TextField($"{keys[0].value}", EditorStyles.label);
                 }
-                else
+                else if (keys.Length > 0) // unlikely to be 0, but just in case
                 {
-                    EditorGUILayout.TextField($"{curve.keys[0].value} → {curve.keys[curve.length - 1].value}", EditorStyles.label);
+                    EditorGUILayout.TextField($"{keys[0].value} → {keys[curve.length - 1].value}", EditorStyles.label);
                     EditorGUILayout.CurveField(curve);
                 }
                 EditorGUILayout.EndHorizontal();
