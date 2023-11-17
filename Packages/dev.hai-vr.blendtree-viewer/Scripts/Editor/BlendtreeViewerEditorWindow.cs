@@ -224,13 +224,13 @@ namespace Hai.BlendtreeViewer.Scripts.Editor
             }
         }
 
-        [MenuItem("Window/Haï/BlendtreeViewer")]
+        [MenuItem("Window/Haï/BlendTreeViewer")]
         public static void ShowWindow()
         {
             Obtain().Show();
         }
 
-        [MenuItem("CONTEXT/BlendTree/Haï BlendtreeViewer")]
+        [MenuItem("CONTEXT/BlendTree/Haï BlendTreeViewer")]
         public static void OpenEditor(MenuCommand command)
         {
             var window = Obtain();
@@ -257,7 +257,7 @@ namespace Hai.BlendtreeViewer.Scripts.Editor
 
         private static GUIContent MakeTitle()
         {
-            return new GUIContent("BlendtreeViewer");
+            return new GUIContent("BlendTreeViewer");
         }
     }
 }
